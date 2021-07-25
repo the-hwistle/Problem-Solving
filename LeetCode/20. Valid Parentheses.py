@@ -5,6 +5,7 @@ class Solution:
     def isValid(self, s: str) -> bool:
         # 왼쪽 괄호
         left = ['(', '[', '{']
+        # 오른쪽 괄호
         right = [')', ']', '}']
         
         # 빈 스택
