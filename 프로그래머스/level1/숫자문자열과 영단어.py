@@ -1,5 +1,5 @@
 # [프로그래머스]
-# 코딩테스트 연습 > 2021 카카오 인턴십 for Tech developers > 문제: 숫자문자열과영단어(level 1)
+# 코딩테스트 연습 > 2021 카카오 인턴십 for Tech developers > 문제: 숫자문자열과 영단어(level 1)
 def solution(s):
     eng = {'zero':'0', 'one':'1', 'two':'2', 'three':'3', 'four':'4', 'five':'5', 'six':'6', 'seven':'7', 'eight':'8', 'nine':'9'}
     
