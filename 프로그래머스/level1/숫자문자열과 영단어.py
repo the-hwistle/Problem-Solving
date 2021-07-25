@@ -1,5 +1,7 @@
 # [프로그래머스]
 # 코딩테스트 연습 > 2021 카카오 인턴십 for Tech developers > 문제: 숫자문자열과 영단어(level 1)
+# 문제: https://programmers.co.kr/learn/courses/30/lessons/81301?language=python3
+
 def solution(s):
     eng = {'zero':'0', 'one':'1', 'two':'2', 'three':'3', 'four':'4', 'five':'5', 'six':'6', 'seven':'7', 'eight':'8', 'nine':'9'}
     
@@ -29,3 +31,16 @@ def solution(s):
     answer = int(answer)
     
     return answer
+
+
+
+
+# replace함수를 활용한 풀이
+def solution2(s):
+    eng = {'zero':'0', 'one':'1', 'two':'2', 'three':'3', 'four':'4', 'five':'5', 'six':'6', 'seven':'7', 'eight':'8', 'nine':'9'}
+    
+    answer = s
+    for key in eng.keys():
+        answer = answer.replace(key, eng[key])
+        
+    return int(answer)
