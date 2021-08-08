@@ -18,7 +18,7 @@ def solution(record):
             if tokens[0] == 'Enter':
                 message[idx] = ['Enter', tokens[1]]
 
-            user[tokens[1]] = tokens[2]   # 'Enter' 또는 'Change'인 경우 닉네임을 업데이트한다.
+            user[tokens[1]] = tokens[2]   # 'Enter' 또는 'Change'인 경우 닉네임을 업데이트한다. (조건문으로 분리 가능)
 
     for idx, m in message.items():
         if m[0] == 'Enter':
