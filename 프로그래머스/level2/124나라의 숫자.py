@@ -18,14 +18,14 @@ def solution(n):
     
     
     
-    # 10진수를 3진수로 변환 (3으로 계속 나눠준다.)
+    # 0진수를 3진수로 변환 (3으로 계속 나눠준다.)
     Q = n
     while True:
         R = Q%3     # 나머지 (0~1)
         Q = Q//3    # 몫
         
         if Q == 0:       # 이 경우는 n이 0,1,2일때만 해당한다.
-            answer += str(R)
+            answer = str(R) + answer
             break
         
         elif R == 0:     # 나머지가 0일 경우, 몫을 1감소시키고 나머지를 3으로 수정
@@ -33,19 +33,14 @@ def solution(n):
             R = 3
         
         if Q < 3:        # 반복문 종료
-            answer += str(R)
+            answer = str(R) + answer
             if Q > 0:
-                answer += str(Q)
+                answer = str(Q) + answer
             break
         else:
-            answer += str(R)
+            answer = str(R) + answer
     
     # 3을 4로 바꾸기
     answer = answer.replace('3', '4')
-    
-    # 뒤집기
-    answer = list(answer)
-    answer.reverse()
-    answer = ''.join(answer)
     
     return answer
