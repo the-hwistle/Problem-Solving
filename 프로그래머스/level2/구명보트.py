@@ -10,8 +10,6 @@ from collections import deque
 def solution(people, limit):
     answer = 0
     
-    n = len(people)
-    
     people.sort()
     weights = deque(people)
     
@@ -27,7 +25,6 @@ def solution(people, limit):
             weights.pop()    # 마지막 원소 제거
             weights.popleft()   # 첫번째 원소 제거
             answer += 1
-        # print(answer)
     
     if len(weights)==1:
         answer += 1
@@ -35,7 +32,7 @@ def solution(people, limit):
     return answer
 
 
-# 풀이2) 정확성 통과. 효율성 통과 (max, min대신 인덱싱만 조절)
+# 풀이2) 정확성 통과. 효율성 통과 (원소를 제거하는 대신 인덱스만 조절)
 
 # 입력: 몸무게를 담은 배열, 무게제한
 # 출력: 필요한 구명보트 최소 개수
