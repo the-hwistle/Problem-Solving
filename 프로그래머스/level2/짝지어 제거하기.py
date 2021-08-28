@@ -2,8 +2,23 @@
 # 문제링크: https://programmers.co.kr/learn/courses/30/lessons/12973
 
 def solution(s):
-    answer = -1
+    if len(s) % 2 == 1:
+        return 0
     
-    print(s)
-
-    return answer
+    stack = list(s)
+    temp = []
+    while stack != []:
+        if temp == []:
+            temp.append(stack.pop())
+        
+        if temp[-1] == stack[-1]:
+            temp.pop()
+            stack.pop()
+        
+        else:
+            temp.append(stack.pop())
+            
+    if temp == []:
+        return 1
+    else:
+        return 0
